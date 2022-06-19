@@ -32,4 +32,8 @@ class PoemsViewModel: ObservableObject {
       }
       .store(in: &cancellable)
   }
+
+  func poemsWith(type: String) -> [Poem] {
+    poems.filter { $0.type == type }
+  }
 }
