@@ -9,14 +9,20 @@ import SwiftUI
 
 struct PoemList: View {
   var poems: [Poem]
-    var body: some View {
-      List(poems) { poem in
-        NavigationLink(destination: PoemDetail(poem: poem)) {
-          Text(poem.title)
-        }
+
+  init(poems: [Poem]) {
+    self.poems = poems
+    print("Create PoemList ...")
+  }
+
+  var body: some View {
+    List(poems) { poem in
+      NavigationLink(destination: PoemDetail(poem: poem)) {
+        Text(poem.title)
       }
-      .navigationTitle(Text("Title"))
     }
+    .navigationTitle(Text("Title"))
+  }
 }
 
 struct PoemList_Previews: PreviewProvider {
