@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "poems-300.json",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
