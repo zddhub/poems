@@ -13,7 +13,7 @@ struct DeprecatedPoemBook: View {
   var body: some View {
     NavigationView {
       List(viewModel.types, id: \.self) { type in
-        NavigationLink(type, destination: PoemList(poems: viewModel.poemsWith(type: type)))
+        NavigationLink(type, destination: DeprecatedPoemList(poems: viewModel.poemsWith(type: type)))
       }
       .navigationTitle(Text("Type"))
     }

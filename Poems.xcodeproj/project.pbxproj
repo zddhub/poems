@@ -14,11 +14,15 @@
 		B5FF882E285EE148006CD9DB /* Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF882D285EE148006CD9DB /* Poem.swift */; };
 		B5FF8831285EE20A006CD9DB /* PoemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8830285EE20A006CD9DB /* PoemsViewModel.swift */; };
 		B5FF8835285EE378006CD9DB /* DeprecatedPoemBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8834285EE378006CD9DB /* DeprecatedPoemBook.swift */; };
-		B5FF8838285EE57E006CD9DB /* PoemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8837285EE57E006CD9DB /* PoemList.swift */; };
+		B5FF8838285EE57E006CD9DB /* DeprecatedPoemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8837285EE57E006CD9DB /* DeprecatedPoemList.swift */; };
 		B5FF8839285EEBCB006CD9DB /* poems-300.json in Resources */ = {isa = PBXBuildFile; fileRef = B5FF882F285EE185006CD9DB /* poems-300.json */; };
-		B5FF883B285EED2C006CD9DB /* PoemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF883A285EED2C006CD9DB /* PoemDetail.swift */; };
+		B5FF883B285EED2C006CD9DB /* DeprecatedPoemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF883A285EED2C006CD9DB /* DeprecatedPoemDetail.swift */; };
 		B5FF883F285EF812006CD9DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5FF883D285EF812006CD9DB /* Localizable.strings */; };
-		B5FF8841285EF8C8006CD9DB /* RelatedPoems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8840285EF8C8006CD9DB /* RelatedPoems.swift */; };
+		B5FF8841285EF8C8006CD9DB /* DeprecatedRelatedPoems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8840285EF8C8006CD9DB /* DeprecatedRelatedPoems.swift */; };
+		B5FF8844285F3FD7006CD9DB /* PoemBookStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8843285F3FD7006CD9DB /* PoemBookStack.swift */; };
+		B5FF8846285F424A006CD9DB /* PoemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8845285F424A006CD9DB /* PoemList.swift */; };
+		B5FF8848285F4365006CD9DB /* PoemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8847285F4365006CD9DB /* PoemDetail.swift */; };
+		B5FF884A285F43CC006CD9DB /* RelatedPoems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8849285F43CC006CD9DB /* RelatedPoems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +36,14 @@
 		B5FF882F285EE185006CD9DB /* poems-300.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "poems-300.json"; sourceTree = "<group>"; };
 		B5FF8830285EE20A006CD9DB /* PoemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemsViewModel.swift; sourceTree = "<group>"; };
 		B5FF8834285EE378006CD9DB /* DeprecatedPoemBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeprecatedPoemBook.swift; sourceTree = "<group>"; };
-		B5FF8837285EE57E006CD9DB /* PoemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemList.swift; sourceTree = "<group>"; };
-		B5FF883A285EED2C006CD9DB /* PoemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemDetail.swift; sourceTree = "<group>"; };
+		B5FF8837285EE57E006CD9DB /* DeprecatedPoemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeprecatedPoemList.swift; sourceTree = "<group>"; };
+		B5FF883A285EED2C006CD9DB /* DeprecatedPoemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeprecatedPoemDetail.swift; sourceTree = "<group>"; };
 		B5FF883E285EF812006CD9DB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = Localizable.strings; sourceTree = "<group>"; };
-		B5FF8840285EF8C8006CD9DB /* RelatedPoems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedPoems.swift; sourceTree = "<group>"; };
+		B5FF8840285EF8C8006CD9DB /* DeprecatedRelatedPoems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeprecatedRelatedPoems.swift; sourceTree = "<group>"; };
+		B5FF8843285F3FD7006CD9DB /* PoemBookStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemBookStack.swift; sourceTree = "<group>"; };
+		B5FF8845285F424A006CD9DB /* PoemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemList.swift; sourceTree = "<group>"; };
+		B5FF8847285F4365006CD9DB /* PoemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemDetail.swift; sourceTree = "<group>"; };
+		B5FF8849285F43CC006CD9DB /* RelatedPoems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedPoems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				B5FF8834285EE378006CD9DB /* DeprecatedPoemBook.swift */,
-				B5FF8837285EE57E006CD9DB /* PoemList.swift */,
-				B5FF883A285EED2C006CD9DB /* PoemDetail.swift */,
-				B5FF8840285EF8C8006CD9DB /* RelatedPoems.swift */,
+				B5FF8837285EE57E006CD9DB /* DeprecatedPoemList.swift */,
+				B5FF883A285EED2C006CD9DB /* DeprecatedPoemDetail.swift */,
+				B5FF8840285EF8C8006CD9DB /* DeprecatedRelatedPoems.swift */,
 			);
 			path = DeprecatedNavigation;
 			sourceTree = "<group>";
@@ -113,6 +121,10 @@
 		B5FF8842285F3EF0006CD9DB /* NavigationStack */ = {
 			isa = PBXGroup;
 			children = (
+				B5FF8843285F3FD7006CD9DB /* PoemBookStack.swift */,
+				B5FF8845285F424A006CD9DB /* PoemList.swift */,
+				B5FF8847285F4365006CD9DB /* PoemDetail.swift */,
+				B5FF8849285F43CC006CD9DB /* RelatedPoems.swift */,
 			);
 			path = NavigationStack;
 			sourceTree = "<group>";
@@ -192,11 +204,15 @@
 			files = (
 				B5FF8821285EE0BA006CD9DB /* ContentView.swift in Sources */,
 				B5FF882E285EE148006CD9DB /* Poem.swift in Sources */,
-				B5FF8841285EF8C8006CD9DB /* RelatedPoems.swift in Sources */,
-				B5FF8838285EE57E006CD9DB /* PoemList.swift in Sources */,
+				B5FF8841285EF8C8006CD9DB /* DeprecatedRelatedPoems.swift in Sources */,
+				B5FF8848285F4365006CD9DB /* PoemDetail.swift in Sources */,
+				B5FF8838285EE57E006CD9DB /* DeprecatedPoemList.swift in Sources */,
+				B5FF8844285F3FD7006CD9DB /* PoemBookStack.swift in Sources */,
 				B5FF8835285EE378006CD9DB /* DeprecatedPoemBook.swift in Sources */,
+				B5FF8846285F424A006CD9DB /* PoemList.swift in Sources */,
 				B5FF881F285EE0BA006CD9DB /* PoemsApp.swift in Sources */,
-				B5FF883B285EED2C006CD9DB /* PoemDetail.swift in Sources */,
+				B5FF883B285EED2C006CD9DB /* DeprecatedPoemDetail.swift in Sources */,
+				B5FF884A285F43CC006CD9DB /* RelatedPoems.swift in Sources */,
 				B5FF8831285EE20A006CD9DB /* PoemsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

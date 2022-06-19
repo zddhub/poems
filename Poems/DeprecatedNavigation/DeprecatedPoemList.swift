@@ -1,5 +1,5 @@
 //
-//  PoemList.swift
+//  DeprecatedPoemList.swift
 //  Poems
 //
 //  Created by Dongdong Zhang on 2022/6/19.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PoemList: View {
+struct DeprecatedPoemList: View {
   var poems: [Poem]
 
   init(poems: [Poem]) {
@@ -17,7 +17,7 @@ struct PoemList: View {
 
   var body: some View {
     List(poems) { poem in
-      NavigationLink(destination: PoemDetail(poem: poem)) {
+      NavigationLink(destination: DeprecatedPoemDetail(poem: poem)) {
         Text(poem.title)
       }
     }
@@ -25,9 +25,9 @@ struct PoemList: View {
   }
 }
 
-struct PoemList_Previews: PreviewProvider {
+struct DeprecatedPoemList_Previews: PreviewProvider {
     static var previews: some View {
-        PoemList(poems: [Poem(
+        DeprecatedPoemList(poems: [Poem(
           id: 234,
           contents: "美人卷珠帘，深坐蹙蛾眉。\n但见泪痕湿，不知心恨谁？",
           type: "五言绝句",

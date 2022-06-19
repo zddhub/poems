@@ -19,7 +19,7 @@ struct RelatedPoems: View {
           .font(.footnote)
         ForEach(relatedPoems) { poem in
           HStack {
-            NavigationLink(destination: PoemDetail(poem: poem)) {
+            NavigationLink(value: poem) {
               Text(poem.title)
                 .font(.body)
             }
@@ -27,7 +27,6 @@ struct RelatedPoems: View {
           }
         }
       }
-      .padding()
     } else {
       EmptyView()
     }
@@ -40,12 +39,13 @@ struct RelatedPoems: View {
 
 struct RelatedPoems_Previews: PreviewProvider {
     static var previews: some View {
-      RelatedPoems(poem: Poem(
+      PoemDetail(poem: Poem(
         id: 234,
         contents: "美人卷珠帘，深坐蹙蛾眉。\n但见泪痕湿，不知心恨谁？",
         type: "五言绝句",
         author: "李白",
         title: "怨情"
       ))
+      .environmentObject(PoemsViewModel())
     }
 }
