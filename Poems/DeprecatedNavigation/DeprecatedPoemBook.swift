@@ -1,5 +1,5 @@
 //
-//  DeprecatedNavigationView.swift
+//  DeprecatedPoemBook.swift
 //  Poems
 //
 //  Created by Dongdong Zhang on 2022/6/19.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DeprecatedNavigationView: View {
+struct DeprecatedPoemBook: View {
   @StateObject private var viewModel = PoemsViewModel()
 
   var body: some View {
@@ -24,8 +24,8 @@ struct DeprecatedNavigationView: View {
   }
 }
 
-struct DeprecatedNavigationView_Previews: PreviewProvider {
+struct DeprecatedPoemBook_Previews: PreviewProvider {
     static var previews: some View {
-        DeprecatedNavigationView()
+        DeprecatedPoemBook()
     }
 }

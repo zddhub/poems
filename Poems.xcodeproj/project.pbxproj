@@ -13,7 +13,7 @@
 		B5FF8827285EE0BC006CD9DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5FF8826285EE0BC006CD9DB /* Preview Assets.xcassets */; };
 		B5FF882E285EE148006CD9DB /* Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF882D285EE148006CD9DB /* Poem.swift */; };
 		B5FF8831285EE20A006CD9DB /* PoemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8830285EE20A006CD9DB /* PoemsViewModel.swift */; };
-		B5FF8835285EE378006CD9DB /* DeprecatedNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8834285EE378006CD9DB /* DeprecatedNavigationView.swift */; };
+		B5FF8835285EE378006CD9DB /* DeprecatedPoemBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8834285EE378006CD9DB /* DeprecatedPoemBook.swift */; };
 		B5FF8838285EE57E006CD9DB /* PoemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8837285EE57E006CD9DB /* PoemList.swift */; };
 		B5FF8839285EEBCB006CD9DB /* poems-300.json in Resources */ = {isa = PBXBuildFile; fileRef = B5FF882F285EE185006CD9DB /* poems-300.json */; };
 		B5FF883B285EED2C006CD9DB /* PoemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF883A285EED2C006CD9DB /* PoemDetail.swift */; };
@@ -31,7 +31,7 @@
 		B5FF882D285EE148006CD9DB /* Poem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
 		B5FF882F285EE185006CD9DB /* poems-300.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "poems-300.json"; sourceTree = "<group>"; };
 		B5FF8830285EE20A006CD9DB /* PoemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemsViewModel.swift; sourceTree = "<group>"; };
-		B5FF8834285EE378006CD9DB /* DeprecatedNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeprecatedNavigationView.swift; sourceTree = "<group>"; };
+		B5FF8834285EE378006CD9DB /* DeprecatedPoemBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeprecatedPoemBook.swift; sourceTree = "<group>"; };
 		B5FF8837285EE57E006CD9DB /* PoemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemList.swift; sourceTree = "<group>"; };
 		B5FF883A285EED2C006CD9DB /* PoemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemDetail.swift; sourceTree = "<group>"; };
 		B5FF883E285EF812006CD9DB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = Localizable.strings; sourceTree = "<group>"; };
@@ -68,6 +68,7 @@
 		B5FF881D285EE0BA006CD9DB /* Poems */ = {
 			isa = PBXGroup;
 			children = (
+				B5FF8842285F3EF0006CD9DB /* NavigationStack */,
 				B5FF883C285EF7F9006CD9DB /* zh-Hans.lproj */,
 				B5FF8836285EE50E006CD9DB /* DeprecatedNavigation */,
 				B5FF882F285EE185006CD9DB /* poems-300.json */,
@@ -93,7 +94,7 @@
 		B5FF8836285EE50E006CD9DB /* DeprecatedNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				B5FF8834285EE378006CD9DB /* DeprecatedNavigationView.swift */,
+				B5FF8834285EE378006CD9DB /* DeprecatedPoemBook.swift */,
 				B5FF8837285EE57E006CD9DB /* PoemList.swift */,
 				B5FF883A285EED2C006CD9DB /* PoemDetail.swift */,
 				B5FF8840285EF8C8006CD9DB /* RelatedPoems.swift */,
@@ -107,6 +108,13 @@
 				B5FF883D285EF812006CD9DB /* Localizable.strings */,
 			);
 			path = "zh-Hans.lproj";
+			sourceTree = "<group>";
+		};
+		B5FF8842285F3EF0006CD9DB /* NavigationStack */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NavigationStack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +194,7 @@
 				B5FF882E285EE148006CD9DB /* Poem.swift in Sources */,
 				B5FF8841285EF8C8006CD9DB /* RelatedPoems.swift in Sources */,
 				B5FF8838285EE57E006CD9DB /* PoemList.swift in Sources */,
-				B5FF8835285EE378006CD9DB /* DeprecatedNavigationView.swift in Sources */,
+				B5FF8835285EE378006CD9DB /* DeprecatedPoemBook.swift in Sources */,
 				B5FF881F285EE0BA006CD9DB /* PoemsApp.swift in Sources */,
 				B5FF883B285EED2C006CD9DB /* PoemDetail.swift in Sources */,
 				B5FF8831285EE20A006CD9DB /* PoemsViewModel.swift in Sources */,
@@ -257,6 +265,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -309,6 +319,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -336,7 +348,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zddhub.Poems;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -368,7 +380,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zddhub.Poems;
 				PRODUCT_NAME = "$(TARGET_NAME)";
