@@ -20,7 +20,7 @@ struct PoemDetail: View {
       poemContent
       RelatedPoems(poem: poem)
     }
-    .padding()
+    .padding(.horizontal)
   }
 
   var poemContent: some View {
