@@ -12,6 +12,10 @@ struct PoemsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+              .onAppear {
+                UINavigationController().navigationBar.backItem?.title = "Back"
+              }
+              .environment(\.locale, .init(identifier: "zh-Hans"))
         }
     }
 }

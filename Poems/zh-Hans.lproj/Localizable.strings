@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Poems
+
+  Created by Dongdong Zhang on 2022/6/19.
+  
+*/
+"Type" = "体裁";
+
+"Title" = "诗名";
+
+"Back" = "返回";

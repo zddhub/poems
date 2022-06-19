@@ -17,6 +17,7 @@
 		B5FF8838285EE57E006CD9DB /* PoemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8837285EE57E006CD9DB /* PoemList.swift */; };
 		B5FF8839285EEBCB006CD9DB /* poems-300.json in Resources */ = {isa = PBXBuildFile; fileRef = B5FF882F285EE185006CD9DB /* poems-300.json */; };
 		B5FF883B285EED2C006CD9DB /* PoemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF883A285EED2C006CD9DB /* PoemDetail.swift */; };
+		B5FF883F285EF812006CD9DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5FF883D285EF812006CD9DB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B5FF8834285EE378006CD9DB /* DeprecatedNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeprecatedNavigationView.swift; sourceTree = "<group>"; };
 		B5FF8837285EE57E006CD9DB /* PoemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemList.swift; sourceTree = "<group>"; };
 		B5FF883A285EED2C006CD9DB /* PoemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemDetail.swift; sourceTree = "<group>"; };
+		B5FF883E285EF812006CD9DB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		B5FF881D285EE0BA006CD9DB /* Poems */ = {
 			isa = PBXGroup;
 			children = (
+				B5FF883C285EF7F9006CD9DB /* zh-Hans.lproj */,
 				B5FF8836285EE50E006CD9DB /* DeprecatedNavigation */,
 				B5FF882F285EE185006CD9DB /* poems-300.json */,
 				B5FF882D285EE148006CD9DB /* Poem.swift */,
@@ -93,6 +96,14 @@
 				B5FF883A285EED2C006CD9DB /* PoemDetail.swift */,
 			);
 			path = DeprecatedNavigation;
+			sourceTree = "<group>";
+		};
+		B5FF883C285EF7F9006CD9DB /* zh-Hans.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				B5FF883D285EF812006CD9DB /* Localizable.strings */,
+			);
+			path = "zh-Hans.lproj";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = B5FF8812285EE0BA006CD9DB;
 			productRefGroup = B5FF881C285EE0BA006CD9DB /* Products */;
@@ -154,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5FF8839285EEBCB006CD9DB /* poems-300.json in Resources */,
+				B5FF883F285EF812006CD9DB /* Localizable.strings in Resources */,
 				B5FF8827285EE0BC006CD9DB /* Preview Assets.xcassets in Resources */,
 				B5FF8823285EE0BC006CD9DB /* Assets.xcassets in Resources */,
 			);
@@ -177,6 +190,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B5FF883D285EF812006CD9DB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5FF883E285EF812006CD9DB /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B5FF8828285EE0BC006CD9DB /* Debug */ = {
