@@ -18,6 +18,7 @@
 		B5FF8839285EEBCB006CD9DB /* poems-300.json in Resources */ = {isa = PBXBuildFile; fileRef = B5FF882F285EE185006CD9DB /* poems-300.json */; };
 		B5FF883B285EED2C006CD9DB /* PoemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF883A285EED2C006CD9DB /* PoemDetail.swift */; };
 		B5FF883F285EF812006CD9DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5FF883D285EF812006CD9DB /* Localizable.strings */; };
+		B5FF8841285EF8C8006CD9DB /* RelatedPoems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF8840285EF8C8006CD9DB /* RelatedPoems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B5FF8837285EE57E006CD9DB /* PoemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemList.swift; sourceTree = "<group>"; };
 		B5FF883A285EED2C006CD9DB /* PoemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemDetail.swift; sourceTree = "<group>"; };
 		B5FF883E285EF812006CD9DB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = Localizable.strings; sourceTree = "<group>"; };
+		B5FF8840285EF8C8006CD9DB /* RelatedPoems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedPoems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				B5FF8834285EE378006CD9DB /* DeprecatedNavigationView.swift */,
 				B5FF8837285EE57E006CD9DB /* PoemList.swift */,
 				B5FF883A285EED2C006CD9DB /* PoemDetail.swift */,
+				B5FF8840285EF8C8006CD9DB /* RelatedPoems.swift */,
 			);
 			path = DeprecatedNavigation;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			files = (
 				B5FF8821285EE0BA006CD9DB /* ContentView.swift in Sources */,
 				B5FF882E285EE148006CD9DB /* Poem.swift in Sources */,
+				B5FF8841285EF8C8006CD9DB /* RelatedPoems.swift in Sources */,
 				B5FF8838285EE57E006CD9DB /* PoemList.swift in Sources */,
 				B5FF8835285EE378006CD9DB /* DeprecatedNavigationView.swift in Sources */,
 				B5FF881F285EE0BA006CD9DB /* PoemsApp.swift in Sources */,

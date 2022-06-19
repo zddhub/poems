@@ -20,6 +20,7 @@ struct DeprecatedNavigationView: View {
     .task {
       viewModel.load()
     }
+    .environmentObject(viewModel)
   }
 }
 

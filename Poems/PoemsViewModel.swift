@@ -36,4 +36,12 @@ class PoemsViewModel: ObservableObject {
   func poemsWith(type: String) -> [Poem] {
     poems.filter { $0.type == type }
   }
+
+  func relatedPoems(poem: Poem?) -> [Poem] {
+    guard let poem else { return [] }
+
+    return poems.filter {
+      $0.author == poem.author && $0.type == poem.type && $0.title != poem.title
+    }
+  }
 }

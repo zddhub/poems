@@ -17,13 +17,18 @@ struct PoemDetail: View {
 
   var body: some View {
     ScrollView {
-      VStack(spacing: 16) {
-        Text(poem.title)
-          .font(.title)
-        Text(poem.author)
-        Text("\(poem.contents)")
-          .lineSpacing(8.0)
-      }
+      poemContent
+      RelatedPoems(poem: poem)
+    }
+  }
+
+  var poemContent: some View {
+    VStack(spacing: 16) {
+      Text(poem.title)
+        .font(.title)
+      Text(poem.author)
+      Text("\(poem.contents)")
+        .lineSpacing(8.0)
     }
   }
 }
