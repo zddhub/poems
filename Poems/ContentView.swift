@@ -11,7 +11,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
 //          DeprecatedPoemBook()
-          PoemBookStack()
+//          PoemBookStack()
+          PoemBookSplitView()
         }
     }
 }
