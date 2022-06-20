@@ -8,29 +8,29 @@
 import SwiftUI
 
 struct PoemBookSplitView: View {
-  @StateObject private var viewModel = PoemsViewModel()
-  @State private var type: String?
-  @State private var poem: Poem?
+  @StateObject private var viewModel = PoemsViewModel.shared
+  @StateObject private var navigationModel = PoemBookSplitNavigationModel()
+  @SceneStorage("navigation") private var data: Data?
 
   var body: some View {
     NavigationSplitView {
-      List(viewModel.types, id: \.self, selection: $type) { type in
+      List(viewModel.types, id: \.self, selection: $navigationModel.type) { type in
         Text(type)
       }
       .navigationTitle(Text("Type"))
     } content: {
       ZStack { // Workaround: 91311311
-        if let type {
-          List(viewModel.poemsWith(type: type), id: \.self, selection: $poem) { poem in
+        if let type = navigationModel.type {
+          List(viewModel.poemsWith(type: type), id: \.self, selection: $navigationModel.poem) { poem in
             Text(poem.title)
           }
         }
       }
       .navigationTitle(Text("Title"))
     } detail: {
-      NavigationStack {
+      NavigationStack(path: $navigationModel.path) {
         ZStack { // Workaround: 91311311
-          if let poem {
+          if let poem = navigationModel.poem {
             PoemDetail(poem: poem)
           } else {
             EmptyView()
@@ -43,7 +43,20 @@ struct PoemBookSplitView: View {
     }
     .task {
       viewModel.load()
+
+      if let data = self._data.wrappedValue {
+        navigationModel.jsonData = data
+      }
     }
+    .onChange(of: navigationModel.type, perform: { newValue in
+      self.data = navigationModel.jsonData
+    })
+    .onChange(of: navigationModel.poem, perform: { newValue in
+      self.data = navigationModel.jsonData
+    })
+    .onChange(of: navigationModel.path, perform: { newValue in
+      self.data = navigationModel.jsonData
+    })
     .environmentObject(viewModel)
   }
 }

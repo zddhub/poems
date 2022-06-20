@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DeprecatedPoemBook: View {
-  @StateObject private var viewModel = PoemsViewModel()
+  @StateObject private var viewModel = PoemsViewModel.shared
 
   var body: some View {
     NavigationView {

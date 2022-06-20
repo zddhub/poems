@@ -13,7 +13,16 @@ class PoemsViewModel: ObservableObject {
   @Published var types: [String] = []
   private var cancellable = Set<AnyCancellable>()
 
-  init() {}
+  public static let shared = PoemsViewModel()
+
+  private init() {}
+
+  subscript(id: Int?) -> Poem? {
+    guard let id, id > 0 && id < poems.count else {
+      return nil
+    }
+    return poems[id-1]
+  }
 
   func load() {
     guard let url = Bundle.main.url(forResource: "poems-300", withExtension: "json") else {
