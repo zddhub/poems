@@ -10,9 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-//          DeprecatedPoemBook()
-//          PoemBookStack()
-          PoemBookSplitView()
+          TabView {
+            PoemBookStack()
+              .tabItem {
+                Label("NavigationStack", systemImage: "square.stack.3d.up")
+              }
+            PoemBookSplitView()
+              .tabItem {
+                Label("NavigationSplitView", systemImage: "rectangle.split.3x1")
+              }
+            DeprecatedPoemBook()
+              .tabItem {
+                Label("NavigationView", systemImage: "xmark.rectangle")
+              }
+          }
         }
     }
 }
