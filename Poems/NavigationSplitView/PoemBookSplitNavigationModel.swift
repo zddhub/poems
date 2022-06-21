@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PoemBookSplitNavigationModel: ObservableObject, Codable, Equatable {
+class PoemBookSplitNavigationModel: ObservableObject, Codable {
   @Published var type: String?
   @Published var poem: Poem?
   @Published var path: [Poem] = []
@@ -50,11 +50,5 @@ class PoemBookSplitNavigationModel: ObservableObject, Codable, Equatable {
       self.poem = newModel?.poem
       self.path = newModel?.path ?? []
     }
-  }
-
-  static func == (lhs: PoemBookSplitNavigationModel, rhs: PoemBookSplitNavigationModel) -> Bool {
-    return (lhs.type == rhs.type &&
-            lhs.poem == rhs.poem &&
-            lhs.path == rhs.path)
   }
 }

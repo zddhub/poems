@@ -10,7 +10,7 @@ import SwiftUI
 struct PoemBookSplitView: View {
   @StateObject private var viewModel = PoemsViewModel.shared
   @StateObject private var navigationModel = PoemBookSplitNavigationModel()
-  @SceneStorage("navigation") private var data: Data?
+  @AppStorage("navigation") private var data: Data? // @SceneStorage doesn't work here, will review it in official release
 
   var body: some View {
     NavigationSplitView {
@@ -44,18 +44,29 @@ struct PoemBookSplitView: View {
     .task {
       viewModel.load()
 
-      if let data = self._data.wrappedValue {
-        navigationModel.jsonData = data
-      }
+// Can't work currently, use workaround way instead of objectWillChangeSequence
+//      if let data {
+//        navigationModel.jsonData = data
+//      }
+//
+//      for await _ in navigationModel.objectWillChangeSequence { // objectWillChangeSequence 在 beta 版本中不可用
+//        data = navigationModel.jsonData
+//      }
     }
+    // Workaround
     .onChange(of: navigationModel.type, perform: { newValue in
-      self.data = navigationModel.jsonData
+      self.data = _navigationModel.wrappedValue.jsonData
     })
     .onChange(of: navigationModel.poem, perform: { newValue in
-      self.data = navigationModel.jsonData
+      self.data = _navigationModel.wrappedValue.jsonData
     })
     .onChange(of: navigationModel.path, perform: { newValue in
-      self.data = navigationModel.jsonData
+      self.data = _navigationModel.wrappedValue.jsonData
+    })
+    .onChange(of: viewModel.poems, perform: { newValue in
+      if let data = self.data {
+        navigationModel.jsonData = data
+      }
     })
     .environmentObject(viewModel)
   }
