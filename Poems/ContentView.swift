@@ -11,13 +11,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
           TabView {
-            PoemBookStack()
-              .tabItem {
-                Label("NavigationStack", systemImage: "square.stack.3d.up")
-              }
             PoemBookSplitView()
               .tabItem {
                 Label("NavigationSplitView", systemImage: "rectangle.split.3x1")
+              }
+            PoemBookStack()
+              .tabItem {
+                Label("NavigationStack", systemImage: "square.stack.3d.up")
               }
             DeprecatedPoemBook()
               .tabItem {

@@ -69,6 +69,9 @@ struct PoemBookSplitView: View {
       }
     })
     .environmentObject(viewModel)
+    .onOpenURL { url in
+      navigationModel.redirect(to: url.absoluteString)
+    }
   }
 }
 

@@ -51,4 +51,19 @@ class PoemBookSplitNavigationModel: ObservableObject, Codable {
       self.path = newModel?.path ?? []
     }
   }
+
+  func redirect(to: String) {
+    // Test deeplink sample:
+    //  xcrun simctl openurl booted "zddhub://poems?type=0&poemId=5&pathIds=1,2,3,4"
+    let regex = /zddhub:\/\/poems\?type=(\d+)&poemId=(\d+)&pathIds=(.*)/
+
+    guard let match = to.firstMatch(of: regex) else { return }
+    let (_, typeMatched, poemIdMatched, pathIdsMatched) = match.output
+    guard let type = Int(typeMatched),
+          let poemId = Int(poemIdMatched) else { return }
+
+    self.type = PoemsViewModel.shared.types[type]
+    self.poem = PoemsViewModel.shared[poemId]
+    self.path = pathIdsMatched.split(by: ",").compactMap { PoemsViewModel.shared[Int($0)] }
+  }
 }

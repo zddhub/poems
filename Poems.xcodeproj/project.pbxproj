@@ -29,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		B5AC2F742860A648003DB4D1 /* PoemBookSplitNavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemBookSplitNavigationModel.swift; sourceTree = "<group>"; };
+		B5C28467286214B500B5FF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B5FF881B285EE0BA006CD9DB /* Poems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FF881E285EE0BA006CD9DB /* PoemsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemsApp.swift; sourceTree = "<group>"; };
 		B5FF8820285EE0BA006CD9DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		B5FF881D285EE0BA006CD9DB /* Poems */ = {
 			isa = PBXGroup;
 			children = (
+				B5C28467286214B500B5FF52 /* Info.plist */,
 				B5FF8825285EE0BC006CD9DB /* Preview Content */,
 				B5FF884B285F8E47006CD9DB /* NavigationSplitView */,
 				B5FF8842285F3EF0006CD9DB /* NavigationStack */,
@@ -373,6 +375,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Poems/Info.plist;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -405,6 +408,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Poems/Info.plist;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
