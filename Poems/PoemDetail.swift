@@ -43,6 +43,6 @@ struct PoemDetail_Previews: PreviewProvider {
         author: "李白",
         title: "怨情"
       ))
-      .environmentObject(PoemsViewModel.shared)
+      .environmentObject(PoemsDataModel.shared)
     }
 }

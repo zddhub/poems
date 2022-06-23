@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DeprecatedRelatedPoems: View {
   var poem: Poem
-  @EnvironmentObject private var viewModel: PoemsViewModel
+  @EnvironmentObject private var dataModel: PoemsDataModel
 
   var body: some View {
     if relatedPoems.count > 0 {
@@ -34,7 +34,7 @@ struct DeprecatedRelatedPoems: View {
   }
 
   private var relatedPoems: [Poem] {
-    viewModel.relatedPoems(poem: poem)
+    dataModel.relatedPoems(poem: poem)
   }
 }
 
@@ -47,6 +47,6 @@ struct DeprecatedRelatedPoemsRelatedPoems_Previews: PreviewProvider {
         author: "李白",
         title: "怨情"
       ))
-      .environmentObject(PoemsViewModel.shared)
+      .environmentObject(PoemsDataModel.shared)
     }
 }

@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct PoemBookSplitView: View {
-  @StateObject private var viewModel = PoemsViewModel.shared
+  @StateObject private var dataModel = PoemsDataModel.shared
   @StateObject private var navigationModel = PoemBookSplitNavigationModel()
   @AppStorage("navigation") private var data: Data? // @SceneStorage doesn't work here, will review it in official release
 
   var body: some View {
     NavigationSplitView {
-      List(viewModel.types, id: \.self, selection: $navigationModel.type) { type in
+      List(dataModel.types, id: \.self, selection: $navigationModel.type) { type in
         Text(type)
       }
       .navigationTitle(Text("Type"))
     } content: {
       ZStack { // Workaround: 91311311
         if let type = navigationModel.type {
-          List(viewModel.poemsWith(type: type), id: \.self, selection: $navigationModel.poem) { poem in
+          List(dataModel.poemsWith(type: type), id: \.self, selection: $navigationModel.poem) { poem in
             Text(poem.title)
           }
         }
@@ -42,7 +42,7 @@ struct PoemBookSplitView: View {
       }
     }
     .task {
-      viewModel.load()
+      dataModel.load()
 
 // Can't work currently, use workaround way instead of objectWillChangeSequence
 //      if let data {
@@ -63,12 +63,12 @@ struct PoemBookSplitView: View {
     .onChange(of: navigationModel.path, perform: { newValue in
       self.data = _navigationModel.wrappedValue.jsonData
     })
-    .onChange(of: viewModel.poems, perform: { newValue in
+    .onChange(of: dataModel.poems, perform: { newValue in
       if let data = self.data {
         navigationModel.jsonData = data
       }
     })
-    .environmentObject(viewModel)
+    .environmentObject(dataModel)
     .onOpenURL { url in
       navigationModel.redirect(to: url.absoluteString)
     }

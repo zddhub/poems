@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct DeprecatedPoemBook: View {
-  @StateObject private var viewModel = PoemsViewModel.shared
+  @StateObject private var dataModel = PoemsDataModel.shared
 
   var body: some View {
     NavigationView {
-      List(viewModel.types, id: \.self) { type in
-        NavigationLink(type, destination: DeprecatedPoemList(poems: viewModel.poemsWith(type: type)))
+      List(dataModel.types, id: \.self) { type in
+        NavigationLink(type, destination: DeprecatedPoemList(poems: dataModel.poemsWith(type: type)))
       }
       .navigationTitle(Text("Type"))
     }
     .task {
-      viewModel.load()
+      dataModel.load()
     }
-    .environmentObject(viewModel)
+    .environmentObject(dataModel)
   }
 }
 

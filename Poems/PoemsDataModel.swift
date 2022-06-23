@@ -1,5 +1,5 @@
 //
-//  PoemsViewModel.swift
+//  PoemsDataModel.swift
 //  Poems
 //
 //  Created by Dongdong Zhang on 2022/6/19.
@@ -8,12 +8,12 @@
 import Foundation
 import Combine
 
-class PoemsViewModel: ObservableObject {
+class PoemsDataModel: ObservableObject {
   @Published var poems: [Poem] = []
   @Published var types: [String] = []
   private var cancellable = Set<AnyCancellable>()
 
-  public static let shared = PoemsViewModel()
+  public static let shared = PoemsDataModel()
 
   private init() {}
 

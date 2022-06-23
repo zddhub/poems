@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct PoemBookStack: View {
-  @StateObject private var viewModel = PoemsViewModel.shared
+  @StateObject private var dataModel = PoemsDataModel.shared
   private var router = Router()
 
   var body: some View {
     NavigationStack {
-      List(viewModel.types, id: \.self) { type in
+      List(dataModel.types, id: \.self) { type in
         router.route(to: type)
       }
       .navigationDestination(for: String.self, destination: { type in
-        PoemList(poems: viewModel.poemsWith(type: type))
+        PoemList(poems: dataModel.poemsWith(type: type))
       })
       .navigationDestination(for: Poem.self) { poem in
         PoemDetail(poem: poem)
@@ -25,9 +25,9 @@ struct PoemBookStack: View {
       .navigationTitle(Text("Type"))
     }
     .task {
-      viewModel.load()
+      dataModel.load()
     }
-    .environmentObject(viewModel)
+    .environmentObject(dataModel)
     .environmentObject(router)
   }
 }

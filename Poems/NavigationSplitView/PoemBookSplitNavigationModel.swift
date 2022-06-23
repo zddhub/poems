@@ -30,10 +30,10 @@ class PoemBookSplitNavigationModel: ObservableObject, Codable {
     self.type = try container.decodeIfPresent(String.self, forKey: .type)
 
     let poemId = try container.decodeIfPresent(Int.self, forKey: .poemId)
-    self.poem = PoemsViewModel.shared[poemId]
+    self.poem = PoemsDataModel.shared[poemId]
 
     let pathIds = try container.decode([Poem.ID].self, forKey: .pathIds)
-    self.path = pathIds.compactMap({ PoemsViewModel.shared[$0] })
+    self.path = pathIds.compactMap({ PoemsDataModel.shared[$0] })
   }
 
   required init() {}
@@ -62,8 +62,8 @@ class PoemBookSplitNavigationModel: ObservableObject, Codable {
     guard let type = Int(typeMatched),
           let poemId = Int(poemIdMatched) else { return }
 
-    self.type = PoemsViewModel.shared.types[type]
-    self.poem = PoemsViewModel.shared[poemId]
-    self.path = pathIdsMatched.split(by: ",").compactMap { PoemsViewModel.shared[Int($0)] }
+    self.type = PoemsDataModel.shared.types[type]
+    self.poem = PoemsDataModel.shared[poemId]
+    self.path = pathIdsMatched.split(by: ",").compactMap { PoemsDataModel.shared[Int($0)] }
   }
 }

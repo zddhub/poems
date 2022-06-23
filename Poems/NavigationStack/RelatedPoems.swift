@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RelatedPoems: View {
   var poem: Poem
-  @EnvironmentObject private var viewModel: PoemsViewModel
+  @EnvironmentObject private var dataModel: PoemsDataModel
 
   var body: some View {
     if relatedPoems.count > 0 {
@@ -33,7 +33,7 @@ struct RelatedPoems: View {
   }
 
   private var relatedPoems: [Poem] {
-    viewModel.relatedPoems(poem: poem)
+    dataModel.relatedPoems(poem: poem)
   }
 }
 
@@ -46,6 +46,6 @@ struct RelatedPoems_Previews: PreviewProvider {
         author: "李白",
         title: "怨情"
       ))
-      .environmentObject(PoemsViewModel.shared)
+      .environmentObject(PoemsDataModel.shared)
     }
 }
