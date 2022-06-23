@@ -9,11 +9,12 @@ import SwiftUI
 
 struct PoemBookStack: View {
   @StateObject private var viewModel = PoemsViewModel.shared
+  private var router = Router()
 
   var body: some View {
     NavigationStack {
       List(viewModel.types, id: \.self) { type in
-        NavigationLink(type, value: type)
+        router.route(to: type)
       }
       .navigationDestination(for: String.self, destination: { type in
         PoemList(poems: viewModel.poemsWith(type: type))
@@ -27,6 +28,7 @@ struct PoemBookStack: View {
       viewModel.load()
     }
     .environmentObject(viewModel)
+    .environmentObject(router)
   }
 }
 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PoemList: View {
   var poems: [Poem]
+  @EnvironmentObject private var router: Router
 
   init(poems: [Poem]) {
     self.poems = poems
@@ -17,9 +18,7 @@ struct PoemList: View {
 
   var body: some View {
     List(poems) { poem in
-      NavigationLink(value: poem) {
-        Text(poem.title)
-      }
+      router.route(to: poem)
     }
     .navigationTitle(Text("Title"))
   }
@@ -34,5 +33,6 @@ struct PoemList_Previews: PreviewProvider {
       author: "李白",
       title: "怨情"
     )])
+    .environmentObject(Router())
   }
 }
