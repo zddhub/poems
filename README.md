@@ -14,4 +14,12 @@ A poem app to demonstrate Navigation APIs that were introduced from WWDC22.
 - [ ] Update NavigationAuthority bound path tried to update multiple times per frame
 - [ ] Conditional views in columns of NavigationSplitView fail to update on some state changes. (91311311)
 - [ ] Selection-driven, three-column NavigationSplitView sometimes fails to push when collapsed to a single column. (93673059)
+- [ ] NavigationPath store and restore error: NavigationPath.swift:596: Fatal error: throw through?
+
+      ```
+      Failed to decode item in navigation path at index 0. Perhaps the navigationDestination declarations
+have changed since the path was encoded?
+SwiftUI/NavigationPath.swift:596: Fatal error: throw through?
+2022-06-23 21:26:29.584175+0800 Poems[12912:4425684] SwiftUI/NavigationPath.swift:596: Fatal error: throw through?
+      ```
 

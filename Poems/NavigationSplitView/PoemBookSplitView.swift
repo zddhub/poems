@@ -10,7 +10,7 @@ import SwiftUI
 struct PoemBookSplitView: View {
   @StateObject private var dataModel = PoemsDataModel.shared
   @StateObject private var navigationModel = PoemBookSplitNavigationModel()
-  @AppStorage("navigation") private var data: Data? // @SceneStorage doesn't work here, will review it in official release
+  @AppStorage("SplitView.navigation") private var data: Data? // @SceneStorage doesn't work here, will review it in official release
 
   var body: some View {
     NavigationSplitView {
