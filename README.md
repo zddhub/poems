@@ -6,6 +6,12 @@ A poem app to demonstrate Navigation APIs that were introduced from WWDC22.
 
 `zddhub://poems?type=0&poemId=5&pathIds=1,2,3,4`
 
+![Screenshot](./poems-app-screenshot.png)
+
+## Navigation Stack
+
+![Stack](./navigation-stack-diagram.gif)
+
 ## Known issues
 
 - [ ] `@SceneStorage` can't store the data
