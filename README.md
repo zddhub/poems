@@ -29,4 +29,5 @@ have changed since the path was encoded?
 SwiftUI/NavigationPath.swift:596: Fatal error: throw through?
 2022-06-23 21:26:29.584175+0800 Poems[12912:4425684] SwiftUI/NavigationPath.swift:596: Fatal error: throw through?
       ```
+- [ ] Still need to wait for macOS 13.0 to build macOS App
 
