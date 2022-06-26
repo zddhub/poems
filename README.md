@@ -31,9 +31,10 @@ Read [【WWDC22 10054】SwiftUI 新导航方案](https://xiaozhuanlan.com/topic/
 - [ ] Selection-driven, three-column NavigationSplitView sometimes fails to push when collapsed to a single column. (93673059)
 - [ ] NavigationPath store and restore error: NavigationPath.swift:596: Fatal error: throw through?
 
-      ```
-      Failed to decode item in navigation path at index 0. Perhaps the navigationDestination declarations have changed since the path was encoded?
-      SwiftUI/NavigationPath.swift:596: Fatal error: throw through? 2022-06-23 21:26:29.584175+0800 Poems[12912:4425684] SwiftUI/NavigationPath.swift:596: Fatal error: throw through?
-      ```
+  ```
+  Failed to decode item in navigation path at index 0. Perhaps the navigationDestination declarations have changed since the path was encoded?
+  SwiftUI/NavigationPath.swift:596: Fatal error: throw through? 2022-06-23 21:26:29.584175+0800 Poems[12912:4425684] SwiftUI/NavigationPath.swift:596: Fatal error: throw through?
+  ```
+
 - [ ] Still need to wait for macOS 13.0 to build macOS App
 
