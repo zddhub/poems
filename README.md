@@ -4,15 +4,15 @@ A poem app to demonstrate Navigation APIs that were introduced from [WWDC22 1005
 
 Read [【WWDC22 10054】SwiftUI 新导航方案](https://xiaozhuanlan.com/topic/7841259603) to know more about this App.
 
-## Deeplink
-
-`zddhub://poems?type=0&poemId=5&pathIds=1,2,3,4`
-
 ![Screenshot](./assets/poems-app-screenshot.png)
 
 ## Navigation Stack
 
 ![Stack](./assets/navigation-stack-diagram.gif)
+
+## Deeplink
+
+`zddhub://poems?type=0&poemId=5&pathIds=1,2,3,4`
 
 ## Known issues
 
