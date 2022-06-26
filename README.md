@@ -11,7 +11,7 @@ Read [【WWDC22 10054】SwiftUI 新导航方案](https://xiaozhuanlan.com/topic/
 <!-- ![![Stack](./assets/navigation-stack-diagram.gif)](./assets/poems-navigation-stack.mp4) -->
 
 <div align="centor">
-      <a href="./assets/navigation-stack-diagram.gif">
+      <a href="./assets/poems-navigation-stack.mp4">
          <img src="./assets/navigation-stack-diagram.gif" style="width:100%;">
       </a>
 </div>
