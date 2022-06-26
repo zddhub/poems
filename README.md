@@ -8,7 +8,7 @@ Read [【WWDC22 10054】SwiftUI 新导航方案](https://xiaozhuanlan.com/topic/
 
 ## Navigation Stack
 
-![Stack](./assets/navigation-stack-diagram.gif)
+![![Stack](./assets/navigation-stack-diagram.gif)](./assets/poems-navigation-stack.mp4)
 
 ## Deeplink
 
