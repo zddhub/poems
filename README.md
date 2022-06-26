@@ -1,16 +1,18 @@
 # Poems
 
-A poem app to demonstrate Navigation APIs that were introduced from WWDC22.
+A poem app to demonstrate Navigation APIs that were introduced from [WWDC22 10054](https://developer.apple.com/videos/play/wwdc2022/10054).
+
+Read [【WWDC22 10054】SwiftUI 新导航方案](https://xiaozhuanlan.com/topic/7841259603) to know more about this App.
 
 ## Deeplink
 
 `zddhub://poems?type=0&poemId=5&pathIds=1,2,3,4`
 
-![Screenshot](./poems-app-screenshot.png)
+![Screenshot](./assets/poems-app-screenshot.png)
 
 ## Navigation Stack
 
-![Stack](./navigation-stack-diagram.gif)
+![Stack](./assets/navigation-stack-diagram.gif)
 
 ## Known issues
 
@@ -24,10 +26,8 @@ A poem app to demonstrate Navigation APIs that were introduced from WWDC22.
 - [ ] NavigationPath store and restore error: NavigationPath.swift:596: Fatal error: throw through?
 
       ```
-      Failed to decode item in navigation path at index 0. Perhaps the navigationDestination declarations
-have changed since the path was encoded?
-SwiftUI/NavigationPath.swift:596: Fatal error: throw through?
-2022-06-23 21:26:29.584175+0800 Poems[12912:4425684] SwiftUI/NavigationPath.swift:596: Fatal error: throw through?
+      Failed to decode item in navigation path at index 0. Perhaps the navigationDestination declarations have changed since the path was encoded?
+      SwiftUI/NavigationPath.swift:596: Fatal error: throw through? 2022-06-23 21:26:29.584175+0800 Poems[12912:4425684] SwiftUI/NavigationPath.swift:596: Fatal error: throw through?
       ```
 - [ ] Still need to wait for macOS 13.0 to build macOS App
 
